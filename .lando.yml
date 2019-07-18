@@ -1,0 +1,39 @@
+name: cdmrva
+recipe: pantheon
+config:
+  framework: wordpress
+  site: cdmrva
+  id: 25deb111-99b2-4dfc-9446-443997d2d147
+colab:
+  lando: 3.0.0-rc-12
+  recipe: pantheon
+  framework: wordpress
+  version: 1.0.3
+proxy:
+  node:
+    - sync-cdmrva.lndo.site:3000
+services:
+  node:
+    type: node:custom
+    ssl: true
+    overrides:
+      ports:
+        - "3000"
+      image: colab/buildtools:node-8
+tooling:
+  gulp:
+    service: node
+    description: 'Runs gulp commands'
+    cmd: gulp
+  npm:
+    service: node
+    description: 'Runs npm commands'
+    cmd: npm
+  watch:
+    service: node
+    description: 'Runs gulp watch'
+    cmd: cd $LANDO_MOUNT/wp-content/themes/camden/ && npm run watch
+  yarn:
+    service: node
+    description: 'Runs yarn commands'
+    cmd: yarn
