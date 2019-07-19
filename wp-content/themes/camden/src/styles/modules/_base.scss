@@ -10,9 +10,6 @@ body {
 }
 
 html {
-	font-family: 'Lato', sans-serif;
-	font-size: 18px;
-	line-height: 1.8;
 	scroll-behavior: smooth;
 
 	@media (min-width: 768px) {
@@ -22,13 +19,6 @@ html {
 
 body {
 	margin: 0;
-}
-
-section {
-
-	& + & {
-		margin-top: 10%;
-	}
 }
 
 a {
@@ -43,18 +33,4 @@ img {
 	max-width: 100%;
 	height: auto;
 	display: block;
-}
-
-:first-child {
-	margin-top: 0;
-}
-
-:last-child {
-	margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-	.wysiwyg {
-		padding: 0 4vw;
-	}
 }

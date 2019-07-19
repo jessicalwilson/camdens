@@ -1,4 +1,8 @@
+@import 'node_modules/normalize.scss/normalize';
 @import 'modules/base';
-@import 'modules/global';
-@import 'modules/gallery';
+@import 'modules/home-page';
 @import 'modules/form';
+@import 'toolbox/variables';
+@import 'toolbox/typography';
+@import 'containers/header';
+@import 'containers/footer';

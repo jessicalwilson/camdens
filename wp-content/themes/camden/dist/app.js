@@ -142,8 +142,8 @@ AOS.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /app/wp-content/themes/jessica/src/scripts/app.js */"./src/scripts/app.js");
-module.exports = __webpack_require__(/*! /app/wp-content/themes/jessica/src/styles/app.scss */"./src/styles/app.scss");
+__webpack_require__(/*! /app/wp-content/themes/camden/src/scripts/app.js */"./src/scripts/app.js");
+module.exports = __webpack_require__(/*! /app/wp-content/themes/camden/src/styles/app.scss */"./src/styles/app.scss");
 
 
 /***/ })
