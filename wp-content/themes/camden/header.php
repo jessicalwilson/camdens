@@ -20,23 +20,23 @@
 	<div id="top"><!-- Closes in footer.php -->
 		<header class="header">
 			<div class="header__wrapper">
-				<h1 class="header__heading">
-					<?php if (is_front_page()) : ?>
-						<span>
-							<?php bloginfo('name'); ?>
-						</span>
-					<?php else : ?>
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<?php bloginfo('name'); ?>
-						</a>
+				<div class="nav-left">
+					<h1 class="header__heading">
+						<?php if (is_front_page()) : ?>
+								<?php bloginfo('name'); ?>
+						<?php else : ?>
+							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+								<?php bloginfo('name'); ?>
+							</a>
+						<?php endif; ?>
+					</h1>
+
+					<?php if (get_bloginfo('description')) : ?>
+						<h2 class="header__description"><?php bloginfo('description'); ?></h2>
 					<?php endif; ?>
-				</h1>
+				</div>
 
-				<?php if (get_bloginfo('description')) : ?>
-					<h2 class="header__description"><?php bloginfo('description'); ?></h2>
-				<?php endif; ?>
-
-				<div class="nav-float-right">
+				<div class="nav-right">
 					<div class="utility-nav">
 						<p class="phone-number">804.745.6488</p>
 						<p class="address">201 W. 7th St. Richmond, VA 23224</p>
