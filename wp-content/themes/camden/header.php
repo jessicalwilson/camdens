@@ -38,10 +38,8 @@
 
 				<div class="nav-right">
 					<div class="utility-nav">
-						<p class="phone-number">804.745.6488</p>
-						<p class="address">201 W. 7th St. Richmond, VA 23224</p>
-						<a href="https://www.instagram.com/camdensdogtown/"><i class="fab fa-instagram"></i></a>
-						<a href="https://www.facebook.com/Camdens-Dogtown-Market-236787479718917/"><i class="fab fa-facebook"></i></a>
+						<a class="phone-number" href="tel:804-745-6488">804.745.6488</a>
+						<a class="address" href="">201 W. 7th St. Richmond, VA 23224</a>
 					</div>
 					<div class="primary-nav">
 						<?php

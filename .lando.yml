@@ -21,18 +21,18 @@ services:
         - "3000"
       image: colab/buildtools:node-8
 tooling:
-  gulp:
-    service: node
-    description: 'Runs gulp commands'
-    cmd: gulp
   npm:
     service: node
     description: 'Runs npm commands'
     cmd: npm
   watch:
     service: node
-    description: 'Runs gulp watch'
-    cmd: cd $LANDO_MOUNT/wp-content/themes/camden/ && npm run watch
+    description: 'Runs watch'
+    cmd: cd $LANDO_MOUNT/wp-content/themes/camden/ && npm install && npm run watch
+  prod:
+    service: node
+    description: 'Runs prod'
+    cmd: cd $LANDO_MOUNT/wp-content/themes/camden/ && npm install && npm run prod
   yarn:
     service: node
     description: 'Runs yarn commands'

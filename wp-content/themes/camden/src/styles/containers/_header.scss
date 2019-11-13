@@ -1,0 +1,27 @@
+.header {
+    padding: 4vh 4vw 0.5vh 4vw;
+    // background-color: #eee;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .header__heading {
+        max-width: 450px;
+        font-size: 34px;
+        margin-bottom: 0.5em;
+    }
+
+    .header__description {
+        font-family: $accent-font-family;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}
+
+.header__menu-list {
+    margin: 0;
+    padding-top: 0.5em;
+}

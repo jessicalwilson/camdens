@@ -1,23 +1,21 @@
 <?php get_header(); ?>
-<main class="content">
-	<section class="hero-area">
-		<div class="home-copy">
-			<h2>Come check us out</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et mattis quam, a laoreet augue
-				Praesent elementum placerat justo, vel imperdiet dolor.
-				Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
-		</div>
-	</section>
 
-	<section>
-		<h2>Features</h2>
-		<div class="featured-content">
-			<p>Praesent elementum placerat justo, vel imperdiet dolor.
-				Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-		</div>
-		<div class="featured-image">
-			<img src="" alt="">
-		</div>
+<?php 
+	$hero_text = get_field('hero_text');
+	$hero_image = get_field('hero_image');
+?>
+
+<section class="hero hero--home" style="background-image: url(<?php echo $hero_image['url']; ?>)">
+	<div class="hero__copy">
+		<h2><?php echo $hero_text ?></h2>
+	</div>
+</section>
+
+<main class="content home-content">
+	<section class="featured-items">
+		<h2 class="featured-items__title">Features</h2>
+		<?php ?>
+		<div></div>
 	</section>
 
 	<section class="images">
