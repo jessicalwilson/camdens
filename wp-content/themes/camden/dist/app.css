@@ -479,6 +479,29 @@ img {
   padding: 0 4vw;
 }
 
+.callout {
+  background-image: url(/images/topography.png?977e3fd0f430205e51e65488c11fdddc);
+  background-size: cover;
+  background-position: center;
+  background-color: #30967A;
+  color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 -4vw;
+}
+
+.callout__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 4em 0;
+}
+
+.callout__text p {
+  max-width: 50%;
+}
+
 .hero__copy {
   position: relative;
   z-index: 1;
@@ -508,7 +531,7 @@ img {
   background: linear-gradient(0deg, black 0%, rgba(254, 254, 254, 0) 65%);
 }
 
-.hero--home .hero__copy {
+.hero__heading--home {
   padding-top: 15%;
   color: white;
   text-align: center;

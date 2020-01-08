@@ -1,8 +1,9 @@
 @import 'node_modules/normalize.scss/normalize';
+@import 'toolbox/variables';
 @import 'modules/base';
+@import 'modules/callout';
 @import 'modules/hero';
 @import 'modules/form';
-@import 'toolbox/variables';
 @import 'toolbox/typography';
 @import 'containers/header';
 @import 'containers/footer';
