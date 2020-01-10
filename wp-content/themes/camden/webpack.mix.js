@@ -15,15 +15,15 @@ mix
 	.js('src/scripts/app.js', 'dist/')
 	.sass('src/styles/app.scss', 'dist/')
 	.browserSync({
-		host: 'jessica-wilson-portfolio.lndo.site',
+		host: 'camdens.lndo.site',
 		open: false,
 		// proxy: {
 		//     target: 'appserver_nginx'
 		// },
-		// proxy: 'appserver_nginx.jessica-wilson-portfolio.internal',
-		proxy: 'jessica-wilson-portfolio.lndo.site',
+		// proxy: 'appserver_nginx.camdens.internal',
+		proxy: 'camdens.lndo.site',
 		socket: {
-			domain: 'sync-jessica-wilson-portfolio.lndo.site',
+			domain: 'sync-camdens.lndo.site',
 			port: 80
 		},
 		ui: false
