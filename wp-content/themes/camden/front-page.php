@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<?php $hero_image = get_field('hero_image');?>
-<?php $hero_heading = get_field('hero_heading');?>
+<?php $hero_image = get_field('hero_image'); ?>
+<?php $hero_heading = get_field('hero_heading'); ?>
 
 <?php if ($hero_heading) :?>
 	<section class="hero hero--home" style="background-image: url(<?php echo $hero_image; ?>)">
@@ -10,8 +10,6 @@
 <?php endif; ?>
 	
 <main class="content home-content">
-	
-	<?php $featured_item = get_field('featured_item');?>
 	
 	<?php if ( have_rows( 'featured_item' ) ) : ?>
 	<section class="section featured-items">
@@ -45,23 +43,30 @@
 			<a class="callout__link" href="<?php echo $callout['callout_link']['url'] ?>"><?php echo $callout['callout_link']['title'] ?></a>
 		</section>
 	<?php endif; ?>
-
-	<section class="section social-media">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-	</section>
-
+	
+	<?php if ( have_rows( 'hours' ) ) : ?>	
 	<section class="section hours">
 		<h2 class="section__title">Hours</h2>
-		<div class="course">
-			<h3 class=""></h3>
-		</div>
-		<div class="times">
-			<h4></h4>
-			<p></p>
-		</div>
+		<?php while( has_sub_field('hours') ): ?>
+			<div class="course">
+				<h3 class=""><?php the_sub_field('course'); ?></h3>
+			</div>
+			<div class="times">
+				<p><?php the_sub_field('times'); ?></p>
+			</div>
+		<?php endwhile; ?>
 	</section>
+	<?php endif; ?>
+		
+		<?php $social_media = get_field('social_media'); ?>
+		
+		<?php if ($social_media) :?>
+			<section class="section social-media">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</section>
+		<?php endif; ?>
 </main>
 
 <?php get_footer();
